@@ -23,7 +23,7 @@ class ProductController {
   }
   static async findProductById(req, res, next) {
     try {
-      const productId = +req.params.productId;
+      const productId = +req.params.id;
       const product = await Product.findProductById(productId)
       if (product) {
         res.status(200).json(product)

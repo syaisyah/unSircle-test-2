@@ -31,6 +31,7 @@ http://localhost:3007
 2. Permissions
 
 ```
+- GET /permissions
 - GET /permissions/:id
 - PUT /permissions/:id
 - POST /permissions
@@ -199,6 +200,17 @@ Required Auth: Yes (only for super admin)
 }
 ```
 
+- Request Body:
+
+```
+{
+  create_product: "<user create permission",
+  read_product: "<user read permission",
+  update_product: "<user update permission",
+  destroy_product: "<user destroy permission",
+}
+```
+
 - Success Response:
 
 ```
@@ -228,6 +240,34 @@ Response Body:
   message: "Successfully create user permission"
 }
 
+```
+
+4. Get All Permission
+
+```
+Get all permission in database
+URL: /permissions
+Method: GET
+Required Auth: No
+```
+
+- Request Headers:
+
+```
+{
+  access_token: "<access_token>"
+}
+```
+
+- Success Response:
+
+```
+Status: 200 OK
+Response Body:
+
+{
+   permission: [{}]
+}
 ```
 
 ### PRODUCTS
