@@ -11,7 +11,7 @@ class PermissionController {
       next(err)
     }
   }
-
+  
   static editUserPermission(req, res, next) {
     try {
       const userId = +req.params.id;
@@ -19,6 +19,18 @@ class PermissionController {
       const newPermission = { create_product, read_product, update_product, destroy_product,UserId };
       await Permission.update(newPermission, { where: { id: permissionId } })
       res.status(200).json({ message: "Successfully update user permission" })
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  static createUserPermission(req, res, next) {
+    try {
+      const userId = +req.params.id;
+      const { create_product, read_product, update_product, destroy_product, UserId } = req.body;
+      const newPermission = { create_product, read_product, update_product, destroy_product,UserId };
+      await Permission.create(newPermission)
+      res.status(201).json({ message: "Successfully create user permission" })
     } catch (err) {
       next(err)
     }

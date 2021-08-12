@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Permission.hasOne(models.User)
+      Permission.belongsTo(models.User)
     }
   };
   Permission.init({

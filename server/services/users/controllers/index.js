@@ -7,8 +7,8 @@ class UserController {
     try {
       const { full_name, email, password, nik, role } = req.body;
       const newUser = { full_name, email, password, nik, role }
-      await User.create(newUser)
-      res.status(201).json({ message: 'Successfully create new user' })
+      const user = await User.create(newUser)
+      res.status(201).json({ message: 'Successfully create new user', user })
       // panggil api gateway yang ngambil permission
       // ada tambah satu proses ke api gateway secara default jika role super admin (bisa crud), jika admin (bisa crud), employee (read only)
       

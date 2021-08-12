@@ -33,6 +33,7 @@ http://localhost:3007
 ```
 - GET /permissions/:id
 - PUT /permissions/:id
+- POST /permissions
 ```
 
 3. Products
@@ -75,6 +76,7 @@ Response Body:
 
 {
   message: "Successfully create new user",
+  user: {}
 }
 ```
 
@@ -185,7 +187,7 @@ Response Body:
 ```
 Update permission of logged in user
 URL: /orders
-Method: GET
+Method: PUT
 Required Auth: Yes (only for super admin)
 ```
 
@@ -204,6 +206,26 @@ Status: 200 OK
 Response Body:
 {
   message: "Successfully update user permission"
+}
+
+```
+
+3. Create Permission
+
+```
+Create permission when the user first registers
+URL: /permissions
+Method: POST
+Required Auth: No
+```
+
+- Success Response:
+
+```
+Status: 201 Created
+Response Body:
+{
+  message: "Successfully create user permission"
 }
 
 ```

@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasOne(models.Product)
+      User.hasOne(models.Permission)
     }
   };
   User.init({
