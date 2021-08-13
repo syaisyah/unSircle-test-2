@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Product',
     hooks: {
       beforeCreate: product => {
-        product.sku = product.id + Math.random() * 200
+        product.sku = Math.random() * 200000
       }
     }
   });

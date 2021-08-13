@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'client',
-      script: 'cd client && npm start'
+      script: 'cd client/my-app && npm start'
     },
     {
       name: 'services - users',
@@ -17,7 +17,7 @@ module.exports = {
       script: 'cd server/services/permissions && nodemon app.js'
     },
     {
-      name: 'orchestrator',
+      name: 'orchestrator-unsircle',
       script: 'cd server/orchestrator && nodemon app.js'
     }
   ]
