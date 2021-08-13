@@ -7,6 +7,7 @@ export default function Login() {
 
   const login = (user) => {
     //dispatch
+    console.log(user)
   };
 
   const handleOnChange = (e) => {

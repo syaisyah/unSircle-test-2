@@ -1,16 +1,17 @@
-import axios from 'axios'
+// import axios from 'axios'
 
-export function setLoading(payload) {
-  return { type: "loading/setLoading", payload }
-}
+// export function setLoading(payload) {
+//   return { type: "loading/setLoading", payload }
+// }
 
-export function setError(payload) {
-  return { type: "loaderroring/setError", payload }
-}
+// export function setError(payload) {
+//   return { type: "loaderroring/setError", payload }
+// }
 
 
-export function login(payload) {
-  return (dispatch) => {
+// export function login(user) {
+//   return (dispatch) => {
+   
 
-  }
-}
+//   }
+// }
